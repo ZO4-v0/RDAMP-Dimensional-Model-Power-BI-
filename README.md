@@ -1,31 +1,19 @@
-# RDAMP-Dimensional-Model-Power-BI-
-Dimensional Modeling, SQL Transformation &amp; Power BI/Tableau Reporting 
 
-#Problem Description 
+<h1> RDAMP-Dimensional-Model-Power-BI </h1>
+PROJECT TITLE : SQL-Based Data Modeling, Transformation and PowerBI Visualization
 
-Following the foundational analysis in Task 1, Ace Superstore now aims to build a structured, query-optimized reporting system. Your responsibility in this task is twofold: 
- 
-1. Design and implement a star schema using SQL. 
-2. Create SQL views from your schema and connect them directly to Power BI to produce advanced interactive dashboards. 
+<h2>Project Overview </h2> 
+This project demonstrates the implementation of a dimensional data model for Ace Superstore's sales data, following star schema best practices to create an enterprise-grade reporting system. The solution includes SQL-based dimensional modeling, view creation for business insights, and Power BI dashboard development.
 
-#Business Impact 
+<h2>Business Impact</h2> 
+This project helps transition the cleaned dataset into a format optimized for enterprise-grade reporting. Business users will be able to analyze performance from multiple angles using a data model designed for usability and scalability. 
 
-This task helps transition the cleaned dataset into a format optimized for enterprise-grade reporting. Business users will be able to analyze performance from multiple angles using a data model designed for usability and scalability. 
-
-#Acceptance Criteria 
-
-✅ Dimensional Model Design 
-- dim_customer 
-- dim_product 
-- dim_location 
-- dim_date 
-- dim_category 
-- dim_segment 
-- dim_order_mode 
-
-✅ fact_sales containing: 
- - Foreign keys referencing all dimension tables
- - Measures: Total_Sales, Total_Cost, Profit, Discount_Amount, Quantity
+<h2>Business Criteria</h2> 
+Data Modeling
+ ✅ Dimensional Model Design 
+ ✅ Fact Table containing: 
+ ✅ Foreign keys referencing all dimension tables
+ ✅ Business Measures: Total_Sales, Total_Cost, Profit, Discount_Amount, Quantity
 
 ✅ SQL Implementation 
 - Use appropriate CREATE TABLE statements and data types 
@@ -68,3 +56,24 @@ Your README must include:
 - SQL setup instructions 
 - Power BI/Tableau connection steps 
 - Screenshots of each dashboard view
+
+
+<h2> Screenshots </h2>
+Star Schema :
+<img width="914" height="855" alt="image" src="https://github.com/user-attachments/assets/72a0050f-ae34-40da-9e75-fc67c1bd94fe" />
+
+Dashboard#1 : %Discount vs Profit Correlation 
+<img width="1364" height="769" alt="image" src="https://github.com/user-attachments/assets/2192cde3-6bf3-42a3-9592-38a74e8efd92" />
+
+Dashboard#2 : Customer Overview
+<img width="1357" height="766" alt="image" src="https://github.com/user-attachments/assets/745a4a65-d406-43df-a2a8-83728f87bb6b" />
+
+Dashboard#3 : Product Seasonality Overview
+<img width="1357" height="768" alt="image" src="https://github.com/user-attachments/assets/3517577b-4bb7-47ca-a936-90eab745f063" />
+
+Dashboard#4 : Regional Overview
+<img width="1355" height="768" alt="image" src="https://github.com/user-attachments/assets/c8a0cf4b-11fe-4f6c-ac82-db663e6e4ca8" />
+
+Dashboard#5 : Segment Overview
+<img width="1355" height="767" alt="image" src="https://github.com/user-attachments/assets/3df17313-8f8d-4cdd-a30f-c693ff561200" />
+
