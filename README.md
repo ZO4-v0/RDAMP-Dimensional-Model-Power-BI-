@@ -14,43 +14,44 @@ This project helps transition the cleaned dataset into a format optimized for en
 
 <h2>Business Criteria</h2> 
 
- 1. ## Database Modeling 
-      - Dimensional Model Design
-      - Fact Table containing Foreign keys referencing all dimension tables)
- 2. ## Business Measures
-      - Total_orders,
-      - Total_units_ordered,
-      - Average_orders, 
-      - Total_Profit,
-      - Total_SalesRevenue,
-      - Total_Cost,
-      - Profit_Margin_pct,
-      - Avg_discount
- 3. ## SQL Views & Reusable SQL queries 
-      - vw_category_pattern ,
-      - vw_category_region_rankings ,
-      - vw_customer_pattern ,
-      - vw_customer_rank ,
-      -  vw_discount_impact_analysis ,
-      - vw_product_seasonality ,
-      - vw_region_rankings ,
-      - vw_segment_pattern ,
-      - vw_data_validation
- 4. ## Power BI Dashboard 
-      - %Discount vs Profit Correlation ,
-      - Customer Overview ,
-      - Product Seasonality Overview ,
-      - Regional Overview ,
-      - Segment Overview.
-  5. ## Use Initial clean data on previous task : https://github.com/ZO4-v0/RDAMP-Sales-Analysis/tree/main/Dataset
+ ## 1. Database Modeling 
+      Dimensional Model Design
+      Fact Table containing Foreign keys referencing all dimension tables
+ ## 2.  Business Measures
+      Total_orders
+      Total_units_ordered
+      Average_orders
+      Total_Profit
+      Total_SalesRevenue
+      Total_Cost
+      Profit_Margin_pct
+      Avg_discount
+ ## 3. SQL Views & Reusable SQL queries 
+      vw_category_pattern 
+      vw_category_region_rankings 
+      vw_customer_pattern 
+      vw_customer_rank 
+      vw_discount_impact_analysis 
+      vw_product_seasonality 
+      vw_region_rankings 
+      vw_segment_pattern 
+      vw_data_validation
+ ## 4.  Power BI Dashboard 
+      %Discount vs Profit Correlation 
+      Customer Overview 
+      Product Seasonality Overview 
+      Regional Overview 
+      Segment Overview
+ ##  5. Use Initial clean data on previous task
+      https://github.com/ZO4-v0/RDAMP-Sales-Analysis/tree/main/Dataset
 
 <h2>Tools Used </h2> 
 
-1. Excel
-2. MySQL Workbench 8.0
-3. HeidiSQL
-4. PowerBI
-5. Notepad++ with CSV Lint Plugin
+       1. Excel
+       2. MySQL Workbench 8.0
+       3. HeidiSQL
+       4. PowerBI
+       5. Notepad++ with CSV Lint Plugin
 
 <h2> Convert .csv File to SQL format </h2> 
 
@@ -60,28 +61,77 @@ This project helps transition the cleaned dataset into a format optimized for en
 3. Open [CSV LINT] window and validate data
    > <img width="1004" height="231" alt="image" src="https://github.com/user-attachments/assets/918de3ad-4381-49d3-8c9b-e12fef721f7b" />
 4. Once Validated and no Error Found -> Convert data to SQL format modify Batch size SQL insert to Maximum row size.
-   > <img width="398" height="259" alt="image" src="https://github.com/user-attachments/assets/1037a5e9-6d34-48c5-8d00-b273db4f7c90" />
+   ><img width="398" height="259" alt="image" src="https://github.com/user-attachments/assets/1037a5e9-6d34-48c5-8d00-b273db4f7c90" />
 5. [Raw.sql] is now ready for import
-   > <img width="1004" height="592" alt="image" src="https://github.com/user-attachments/assets/ee7308d9-55ec-4c6e-b1ff-4f7369017d0b" />
+   ><img width="1004" height="592" alt="image" src="https://github.com/user-attachments/assets/ee7308d9-55ec-4c6e-b1ff-4f7369017d0b" />
 
 
 <h2> Database Modeling </h2> 
 
 1. Download MySQL Workbench 8.0
    > https://dev.mysql.com/downloads/workbench/?os=33
+   
 2. Connect to Local MySQL connections
    > <img width="270" height="160" alt="image" src="https://github.com/user-attachments/assets/b8430ea0-0ca0-4d68-b433-2db4b716b49c" />
+   
 3. Create New Database
    > <img width="527" height="122" alt="image" src="https://github.com/user-attachments/assets/462ccfa5-1427-49bc-9110-956b7055b46b" />
+   
 4. Perform Data import using pRaw.sql] to [superstore] database
    > <img width="818" height="448" alt="image" src="https://github.com/user-attachments/assets/97e5a23a-f2f4-48ec-853d-c7bf1c1b4fbd" />
+   
 5. Once finished , Validate data and data formats.
    > <img width="268" height="332" alt="image" src="https://github.com/user-attachments/assets/b4665a20-bd9c-40ee-88b7-d7efed52f22c" />
-   <img width="1599" height="718" alt="image" src="https://github.com/user-attachments/assets/a2b3ca36-80a2-4f2e-8c32-13438043b3c4" />
-   <img width="123" height="57" alt="image" src="https://github.com/user-attachments/assets/89e86128-40a2-491a-afec-6391cdb07820" />
+   > > <img width="1599" height="718" alt="image" src="https://github.com/user-attachments/assets/a2b3ca36-80a2-4f2e-8c32-13438043b3c4" />
+   >  <img width="123" height="57" alt="image" src="https://github.com/user-attachments/assets/89e86128-40a2-491a-afec-6391cdb07820" />
+   
+6. Design and draft Star schema with the folliwng Criteria
+
+       1. Descriptive Dimensional Model
+       2. Fact Table containing Foreign keys referencing all dimension tables with clear and atomic data.
+       3. Clean Standardize Text and Normalized Dates
+       4. Handle Nulls and defaults
+       5. Optimized Indexing
+       6. No Duplicate and Null keys
+   >   <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/72a0050f-ae34-40da-9e75-fc67c1bd94fe" />
+  
+7. Using SQL CREATE and INSERT Dimension Table
+
+       Create_Insert_Dimension.sql
+      | Table         | Type    | Columns                    |Description  |
+      |---------------|---------|----------------------------|-------------|
+      |dim_customer   |Dimension| customer_key , customer_id | Contains Unique customer information , Does not include location as location is reference to store ID not customer info |
+      |dim_product    |Dimension| product_key , product_ID , prodcut_name , product_category , product_segment , product_subcat | Contains Unique product information and corresponding segments |
+      |dim_location   |Dimension| location_Key , postal_city , postal_code , city_name , region_name , country_name | Contais ACE'Store Unique Postal Code & City locations 
+      |dim_date       |Dimension| date_key , order_date , order_year , order_month , month_name , quarter_num , yearmonth , quarter_year | Contains normalize order_id date information 
+      |dim_order_mode |Dimension| mode_key , order_mode | Contains order mode information In-store vs Online | 
+
+       
+   
+9. Using SQL CREATE and INSERT Fact Table and add KEY CONSTRAINTS
+
+       Create_Insert_Fact.sql
+       FOREIGN KEY (customer_key) REFERENCES dim_customer(customer_key),
+       FOREIGN KEY (product_key) REFERENCES dim_product(product_key),
+       FOREIGN KEY (location_key) REFERENCES dim_location(location_key),
+       FOREIGN KEY (date_key) REFERENCES dim_date(date_key),
+       FOREIGN KEY (mode_key) REFERENCES dim_order_mode(mode_key)
+      >  <img width="640" height="119" alt="image" src="https://github.com/user-attachments/assets/0727a9d5-c677-4aec-8119-dcbb0748accf" />
 
 
+11. Create Query to validate data imported.
 
+       data_aggregation.sql
+     >  <img width="300" height="196" alt="image" src="https://github.com/user-attachments/assets/f82a6752-6b61-4086-a306-a62eb805af6a" />
+     >  <img width="1350" height="45" alt="image" src="https://github.com/user-attachments/assets/76bdbb5d-2738-4ec0-b17c-1336fa3e7551" />
+     >   <img width="610" height="390" alt="image" src="https://github.com/user-attachments/assets/6dba46bc-d4d7-45db-92be-512da81c5391" />
+     >  <img width="1592" height="57" alt="image" src="https://github.com/user-attachments/assets/0875cf20-fe88-4e17-93d8-5fdd8e301726" />
+
+
+<h2> Database Modeling </h2> 
+
+
+1. Create SQL View Queries to answer Business Questions.
 
 
 
