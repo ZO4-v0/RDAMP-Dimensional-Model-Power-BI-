@@ -3,7 +3,7 @@
 </div>
 
 <h1> RDAMP-Dimensional-Model-Power-BI </h1>
-PROJECT TITLE : SQL-Based Data Modeling, Transformation and PowerBI Visualization
+Dimensional Modeling , SQL Transformation and PowerBI Visualization
 
 <h2>Project Overview </h2> 
 This project demonstrates the implementation of a dimensional data model for Ace Superstore's sales data, following star schema best practices to create an enterprise-grade reporting system. The solution includes SQL-based dimensional modeling, view creation for business insights, and Power BI dashboard development. 
