@@ -6,50 +6,88 @@
 PROJECT TITLE : SQL-Based Data Modeling, Transformation and PowerBI Visualization
 
 <h2>Project Overview </h2> 
-This project demonstrates the implementation of a dimensional data model for Ace Superstore's sales data, following star schema best practices to create an enterprise-grade reporting system. The solution includes SQL-based dimensional modeling, view creation for business insights, and Power BI dashboard development.
+This project demonstrates the implementation of a dimensional data model for Ace Superstore's sales data, following star schema best practices to create an enterprise-grade reporting system. The solution includes SQL-based dimensional modeling, view creation for business insights, and Power BI dashboard development. 
+
 
 <h2>Business Impact</h2> 
 This project helps transition the cleaned dataset into a format optimized for enterprise-grade reporting. Business users will be able to analyze performance from multiple angles using a data model designed for usability and scalability. 
 
 <h2>Business Criteria</h2> 
-Data Modeling
- ✅ Dimensional Model Design 
- ✅ Fact Table containing: 
- ✅ Foreign keys referencing all dimension tables
- ✅ Business Measures: Total_Sales, Total_Cost, Profit, Discount_Amount, Quantity
 
-✅ SQL Implementation 
-- Use appropriate CREATE TABLE statements and data types 
-- Apply foreign key constraints 
-- Clean and deduplicate dimension data 
-- Ensure: 
-  - No NULLs in fact table keys 
-  - Standardized and trimmed text fields 
-  - dim_date includes fields like Order_Date, Year, Month, Quarter
- 
-✅ SQL Views Creation 
-Create at least three SQL views that summarize key insights for Power BI/Tableau 
-The Views include: 
-- vw_product_seasonality: Product performance trends over time 
-- vw_discount_impact_analysis: Correlation between discounts and profits 
-- vw_customer_order_patterns: Average order value, frequency, and profit per customer segment 
-- vw_channel_margin_report: Profitability comparison across online vs in-store 
-- vw_region_category_rankings: Rank categories by profit margin per region
+ 1. ## Database Modeling 
+      - Dimensional Model Design
+      - Fact Table containing Foreign keys referencing all dimension tables)
+ 2. ## Business Measures
+      - Total_orders,
+      - Total_units_ordered,
+      - Average_orders, 
+      - Total_Profit,
+      - Total_SalesRevenue,
+      - Total_Cost,
+      - Profit_Margin_pct,
+      - Avg_discount
+ 3. ## SQL Views & Reusable SQL queries 
+      - vw_category_pattern ,
+      - vw_category_region_rankings ,
+      - vw_customer_pattern ,
+      - vw_customer_rank ,
+      -  vw_discount_impact_analysis ,
+      - vw_product_seasonality ,
+      - vw_region_rankings ,
+      - vw_segment_pattern ,
+      - vw_data_validation
+ 4. ## Power BI Dashboard 
+      - %Discount vs Profit Correlation ,
+      - Customer Overview ,
+      - Product Seasonality Overview ,
+      - Regional Overview ,
+      - Segment Overview.
+  5. ## Use Initial clean data on previous task : https://github.com/ZO4-v0/RDAMP-Sales-Analysis/tree/main/Dataset
 
-✅ Power BI/Tableau Dashboard 
-1. Import your SQL views 
-2. Create an interactive dashboard in Power BI/Tableau using your views 
-3. Dashboard must include: 
-   - Product Seasonality Trends (e.g. heatmap) 
-   - Discount vs. Profit Analysis (e.g. scatter plot or slope chart) 
-   - Average Order Value by Channel and Segment (e.g. combo chart) 
-   - Top 10 Customers by Profit Contribution (e.g. horizontal bar chart) 
-   - Category Ranking by Region (e.g. matrix or bar chart)
-  
-✅Queries 
-Include 5 reusable SQL queries (outside of views) that: 
-- Join fact and dimension tables 
-- Return strategic business insights  
+<h2>Tools Used </h2> 
+
+1. Excel
+2. MySQL Workbench 8.0
+3. HeidiSQL
+4. PowerBI
+5. Notepad++ with CSV Lint Plugin
+
+<h2> Convert .csv File to SQL format </h2> 
+
+1. Save dataset in .csv Format
+2. Open Notepad++ and import .csv file
+   > <img width="1008" height="264" alt="image" src="https://github.com/user-attachments/assets/ca0e01b4-c6a2-4830-9887-a9be32b23c7e" />
+3. Open [CSV LINT] window and validate data
+   > <img width="1004" height="231" alt="image" src="https://github.com/user-attachments/assets/918de3ad-4381-49d3-8c9b-e12fef721f7b" />
+4. Once Validated and no Error Found -> Convert data to SQL format modify Batch size SQL insert to Maximum row size.
+   > <img width="398" height="259" alt="image" src="https://github.com/user-attachments/assets/1037a5e9-6d34-48c5-8d00-b273db4f7c90" />
+5. [Raw.sql] is now ready for import
+   > <img width="1004" height="592" alt="image" src="https://github.com/user-attachments/assets/ee7308d9-55ec-4c6e-b1ff-4f7369017d0b" />
+
+
+<h2> Database Modeling </h2> 
+
+1. Download MySQL Workbench 8.0
+   > https://dev.mysql.com/downloads/workbench/?os=33
+2. Connect to Local MySQL connections
+   > <img width="270" height="160" alt="image" src="https://github.com/user-attachments/assets/b8430ea0-0ca0-4d68-b433-2db4b716b49c" />
+3. Create New Database
+   > <img width="527" height="122" alt="image" src="https://github.com/user-attachments/assets/462ccfa5-1427-49bc-9110-956b7055b46b" />
+4. Perform Data import using pRaw.sql] to [superstore] database
+   > <img width="818" height="448" alt="image" src="https://github.com/user-attachments/assets/97e5a23a-f2f4-48ec-853d-c7bf1c1b4fbd" />
+5. Once finished , Validate data and data formats.
+   > <img width="268" height="332" alt="image" src="https://github.com/user-attachments/assets/b4665a20-bd9c-40ee-88b7-d7efed52f22c" />
+   <img width="1599" height="718" alt="image" src="https://github.com/user-attachments/assets/a2b3ca36-80a2-4f2e-8c32-13438043b3c4" />
+   <img width="123" height="57" alt="image" src="https://github.com/user-attachments/assets/89e86128-40a2-491a-afec-6391cdb07820" />
+
+
+
+
+
+
+
+
+
 
 
 ✅ README.md 
@@ -88,9 +126,9 @@ Your README must include:
 <h3> Dashboard#3 : Product Seasonality Overview  </h3>
 <img width="1357" height="768" alt="image" src="https://github.com/user-attachments/assets/3517577b-4bb7-47ca-a936-90eab745f063" />
 
-<h3> Dashboard#4 :  Regional Overview </h3>
+<h3> Dashboard#4 : Regional Overview </h3>
 <img width="1355" height="768" alt="image" src="https://github.com/user-attachments/assets/c8a0cf4b-11fe-4f6c-ac82-db663e6e4ca8" />
 
-<h3> Dashboard#5 :Segment Overview  </h3>
+<h3> Dashboard#5 : Segment Overview  </h3>
 <img width="1355" height="767" alt="image" src="https://github.com/user-attachments/assets/3df17313-8f8d-4cdd-a30f-c693ff561200" />
 
