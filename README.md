@@ -1,3 +1,6 @@
+<div align="center">
+ <img width="914" height="855" alt="image" src="https://github.com/user-attachments/assets/72a0050f-ae34-40da-9e75-fc67c1bd94fe" />
+</div>
 
 <h1> RDAMP-Dimensional-Model-Power-BI </h1>
 PROJECT TITLE : SQL-Based Data Modeling, Transformation and PowerBI Visualization
@@ -59,21 +62,35 @@ Your README must include:
 
 
 <h2> Screenshots </h2>
-Star Schema :
+
+<h3> Star Schema </h3>
 <img width="914" height="855" alt="image" src="https://github.com/user-attachments/assets/72a0050f-ae34-40da-9e75-fc67c1bd94fe" />
 
-Dashboard#1 : %Discount vs Profit Correlation 
+<h3> superstore Database.Tables </h3>
+<img width="324" height="448" alt="image" src="https://github.com/user-attachments/assets/54dd3a1c-7265-43af-9bcc-62de685f095c" />
+
+<h3>Facts_Table</h3>
+<img width="1392" height="770" alt="image" src="https://github.com/user-attachments/assets/fb12b0aa-f79a-48ac-8cf0-7c213918e8e1" />
+
+<h3>Dimension_Table</h3>
+<img width="278" height="279" alt="image" src="https://github.com/user-attachments/assets/8f2267ce-4045-4acd-941a-7ecbc721f17a" />
+<img width="791" height="297" alt="image" src="https://github.com/user-attachments/assets/04e2f09e-0eec-4c60-8add-6dc25f5e61fa" />
+<img width="744" height="298" alt="image" src="https://github.com/user-attachments/assets/5e16fd14-3b8d-4d76-bf90-3524e3ae6c2d" />
+<img width="313" height="139" alt="image" src="https://github.com/user-attachments/assets/72faa875-b3fc-4df0-bd0f-fc77136eed52" />
+<img width="1027" height="301" alt="image" src="https://github.com/user-attachments/assets/708d2e0d-e86e-4e8f-a4ce-ddd0b3c10c59" />
+
+<h3> Dashboard#1 : %Discount vs Profit Correlation  </h3>
 <img width="1364" height="769" alt="image" src="https://github.com/user-attachments/assets/2192cde3-6bf3-42a3-9592-38a74e8efd92" />
 
-Dashboard#2 : Customer Overview
+<h3> Dashboard#2 : Customer Overview </h3>
 <img width="1357" height="766" alt="image" src="https://github.com/user-attachments/assets/745a4a65-d406-43df-a2a8-83728f87bb6b" />
 
-Dashboard#3 : Product Seasonality Overview
+<h3> Dashboard#3 : Product Seasonality Overview  </h3>
 <img width="1357" height="768" alt="image" src="https://github.com/user-attachments/assets/3517577b-4bb7-47ca-a936-90eab745f063" />
 
-Dashboard#4 : Regional Overview
+<h3> Dashboard#4 :  Regional Overview </h3>
 <img width="1355" height="768" alt="image" src="https://github.com/user-attachments/assets/c8a0cf4b-11fe-4f6c-ac82-db663e6e4ca8" />
 
-Dashboard#5 : Segment Overview
+<h3> Dashboard#5 :Segment Overview  </h3>
 <img width="1355" height="767" alt="image" src="https://github.com/user-attachments/assets/3df17313-8f8d-4cdd-a30f-c693ff561200" />
 
