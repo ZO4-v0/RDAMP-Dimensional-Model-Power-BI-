@@ -70,7 +70,23 @@ This project helps transition the cleaned dataset into a format optimized for en
 
 <h3> Dashboard#3 : Product Seasonality Overview </h3>
 
-  + Heat
+  + Heatmap visuals shows clear profit margin differences across products and quarters.
+  + Identified top products contributor by Profit_margin Q-on-Q
+  + Recommendations : Consider bundling underperforming products with high-margin ones to boost profitability
+
+
+<h3> Dashboard#4 : Regional Category Overview </h3>
+
+  +  East Midlands leads in revenue and order volume, followed by Yorkshire & the Humber and Scotland.
+  +  Top Categories varies region-by-region
+  +  Recommendations : Deploy targeted campaigns in underperforming regions
+
+<h3> Dashboard#5 : Regional Category Overview </h3>
+
+  +  Outdoor and Kitchen segments are leading in total revenue but still present room for margin optimization.
+  +  Bicycles have the highest AOV of 3.5k Instore and 2.9k Online
+  +  Recommendation : Leverage Bicycle Segment by upselling/bundling related items ( accessories , gears ) 
+
 
 <h2>Tools Used </h2> 
 
