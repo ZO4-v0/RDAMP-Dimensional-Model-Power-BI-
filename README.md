@@ -285,7 +285,8 @@ This project helps transition the cleaned dataset into a format optimized for en
 
 <h3> Dashboard#2 : Customer Overview </h3>
 
->   <img width="1357" height="766" alt="image" src="https://github.com/user-attachments/assets/745a4a65-d406-43df-a2a8-83728f87bb6b" />
+>   <img width="1248" height="706" alt="image" src="https://github.com/user-attachments/assets/900d029c-d60b-4091-ab26-43eb7d589088" />
+
 
 <h3> Dashboard#3 : Product Seasonality Overview  </h3>
 
