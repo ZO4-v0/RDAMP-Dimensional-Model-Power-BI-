@@ -12,80 +12,88 @@ This project demonstrates the implementation of a dimensional data model for Ace
 <h2>Business Impact</h2> 
 This project helps transition the cleaned dataset into a format optimized for enterprise-grade reporting. Business users will be able to analyze performance from multiple angles using a data model designed for usability and scalability. 
 
+
 <h2>Business Criteria</h2> 
 
- ## 1. Database Modeling 
-      Dimensional Model Design
-      Fact Table containing Foreign keys referencing all dimension tables
- ## 2.  Business Measures
-      Total_orders
-      Total_units_ordered
-      Average_orders
-      Total_Profit
-      Total_SalesRevenue
-      Total_Cost
-      Profit_Margin_pct
-      Avg_discount
- ## 3. SQL Views & Reusable SQL queries 
-      vw_product_seasonality
-      vw_discount_impact_analysis
-      vw_customer_pattern
-      vw_customer_rank
-      vw_channel_margin_repor
-      vw_category_region_rankings
-      vw_region_rankings
-      vw_segment_pattern
-      vw_category_pattern
-      vw_data_validation
- ## 4.  Power BI Dashboard 
-      %Discount vs Profit Correlation 
-      Customer Overview 
-      Product Seasonality Overview 
-      Regional Overview 
-      Segment Overview
- ##  5. Use Initial clean data on previous task
-      https://github.com/ZO4-v0/RDAMP-Sales-Analysis/tree/main/Dataset
+  1. Database Modeling 
+
+         Dimensional Model Design
+         Fact Table containing Foreign keys referencing all dimension tables
+     
+ 3.  Business Measures
+
+          Total_orders
+          Total_units_ordered
+          Average_orders
+          Total_Profit
+          Total_SalesRevenue
+          Total_Cost
+          Profit_Margin_pct
+          Avg_discount
+ 4. SQL Views & Reusable SQL queries 
+
+         vw_product_seasonality
+         vw_discount_impact_analysis
+         vw_customer_pattern
+         vw_customer_rank
+         vw_channel_margin_repor
+         vw_category_region_rankings
+         vw_region_rankings
+         vw_segment_pattern
+         vw_category_pattern
+         vw_data_validation
+ 5.  Power BI Dashboard 
+
+         %Discount vs Profit Correlation 
+         Customer Overview 
+         Product Seasonality Overview 
+         Regional Overview 
+         Segment Overview
+  6. Use Initial clean data on previous task
+
+         https://github.com/ZO4-v0/RDAMP-Sales-Analysis/tree/main/Dataset
 
 
 <h2>Business Insights / Analysis  </h2> 
 
+
 <h3> Dashboard#1 : Discount vs Profit Correlation Analysis </h3>
 
-   +  Very weak positive correlation (r = 0.178) between discount_pct and profit_margin_pct.
-   +  While a slight upward trend exists, it is not strong enough to suggest a significant impact of discount on profit margin.
-   +  The weak correlation suggests that other variables may be influencing profit margins more than discounts.
-   +  Recommendation : Perform  clustering techniques to identify hidden patterns or drivers of profit margin.
+     - Very weak positive correlation (r = 0.178) between discount_pct and profit_margin_pct.
+     - While a slight upward trend exists, it is not strong enough to suggest a significant impact of discount on profit margin.
+     - The weak correlation suggests that other variables may be influencing profit margins more than discounts.
+     - Recommendation : Perform  clustering techniques to identify hidden patterns or drivers of profit margin.
       
 <h3> Dashboard#2 : Customer Overview </h3>
 
-   + Customer_ID : MN066756 Top customer with £35.83k of total profit conttribution
-   + Accumalted £51.17k of sales revenue across 128 orders  
-   + One of the loyal customers for 26.8 months
-   + Out of 3681 Unique customers , 2138 customers are One-time customers.
-   + Excluding One-time Customers average customer tenure is at 16.42 Months.
-   + Online Purchase shows higher profit_margin_pct vs Instore purchase.
-   + However starting Q2 of 2024 in-store purchase are declining. 17.40% decrease in instore purchase as of Q1 of 2025.
-   + Recommendation : Consider Loyalty promotions for top tier customers and expand digital marketing.
+    - Customer_ID : MN066756 Top customer with £35.83k of total profit conttribution
+    - Accumalted £51.17k of sales revenue across 128 orders  
+    - One of the loyal customers for 26.8 months
+    - Out of 3681 Unique customers , 2138 customers are One-time customers.
+    - Excluding One-time Customers average customer tenure is at 16.42 Months.
+    - Online Purchase shows higher profit_margin_pct vs Instore purchase.
+    - However starting Q2 of 2024 in-store purchase are declining. 17.40% decrease in instore purchase as of Q1 of 2025.
+    - Recommendation : Consider Loyalty promotions for top tier customers and expand digital marketing.
 
 
 <h3> Dashboard#3 : Product Seasonality Overview </h3>
 
-  + Heatmap visuals shows clear profit margin differences across products and quarters.
-  + Identified top products contributor by Profit_margin Q-on-Q
-  + Recommendations : Consider bundling underperforming products with high-margin ones to boost profitability
+    - Heatmap visuals shows clear profit margin differences across products and quarters.
+    - Identified top products contributor by Profit_margin Q-on-Q
+    - Recommendations : Consider bundling underperforming products with high-margin ones to boost profitability
 
 
 <h3> Dashboard#4 : Regional Category Overview </h3>
 
-  +  East Midlands leads in revenue and order volume, followed by Yorkshire & the Humber and Scotland.
-  +  Top Categories varies region-by-region
-  +  Recommendations : Deploy targeted campaigns in underperforming regions
+     - East Midlands leads in revenue and order volume, followed by Yorkshire & the Humber and Scotland.
+     - Top Categories varies region-by-region
+     - Recommendations : Deploy targeted campaigns in underperforming regions
 
 <h3> Dashboard#5 : Regional Category Overview </h3>
 
-  +  Outdoor and Kitchen segments are leading in total revenue but still present room for margin optimization.
-  +  Bicycles have the highest AOV of 3.5k Instore and 2.9k Online
-  +  Recommendation : Leverage Bicycle Segment by upselling/bundling related items ( accessories , gears ) 
+     - Outdoor and Kitchen segments are leading in total revenue but still present room for margin optimization.
+     - Bicycles have the highest AOV of 3.5k Instore and 2.9k Online
+     - Recommendation : Leverage Bicycle Segment by upselling/bundling related items ( accessories , gears ) 
 
 
 <h2>Tools Used </h2> 
